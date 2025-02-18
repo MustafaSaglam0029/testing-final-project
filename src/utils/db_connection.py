@@ -1,10 +1,10 @@
 import psycopg2
 
 db_config = {
-    "dbname": "postgres",
-    "user": "postgres",
+    "dbname": "mydb",
+    "user": "musti",
     "password": "1234",
-    "host": "127.0.0.1",
+    "host": "mydb", # name of docker container
     "port": "5432",
 }
 
@@ -19,4 +19,5 @@ def select():
     cur.execute("select business_partner_id from mandate where mandate_id = '7' ")
     row = cur.fetchall()
     return row
+
 
